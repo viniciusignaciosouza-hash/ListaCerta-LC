@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListaCerta - Controle de Alimentos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Menu lateral -->
+        <aside class="sidebar">
+            <div>
+                <div class="logo">
+                    <div class="logo-icon">L</div>
+                    <h2>Lista<span>Certa</span></h2>
+                </div>
+
+                <p class="menu-title">MENU PRINCIPAL</p>
+
+                <nav class="menu">
+                    <a href="#inicio" class="menu-item active"><span>⌂</span> Início</a>
+                    <a href="#estoque" class="menu-item"><span>📦</span> Meu estoque</a>
+                    <a href="#faltando" class="menu-item"><span>🛒</span> Produtos faltando</a>
+                    <a href="#categorias" class="menu-item"><span>📋</span> Categorias</a>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="tip-card">
+                    <span class="tip-icon">💡</span>
+                    <h3>Dica do dia</h3>
+                    <p>Organizar os alimentos ajuda a evitar desperdícios e facilita as compras da casa.</p>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar">U</div>
+                    <div>
+                        <strong>Minha Casa</strong>
+                        <small>Controle residencial</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+            <header class="topbar" id="inicio">
+                <div>
+                    <h1>Meu estoque</h1>
+                    <p>Veja como está a organização dos alimentos da sua casa.</p>
+                </div>
+                <div class="topbar-right">
+                    <span class="status">● Estoque atualizado</span>
+                    <div class="notification">🔔</div>
+                </div>
+            </header>
+
+            <!-- Seção de cadastro expansível -->
+            <section class="section" id="cadastrar">
+                <details class="cadastrar-details">
+                    <summary class="section-header-toggle">
+                        <div>
+                            <h2>+ Adicionar Novo Produto</h2>
+                            <p>Clique para abrir o formulário de cadastro.</p>
+                        </div>
+                    </summary>
+
+                    <form class="form-cadastro" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="nome-produto">Nome do produto</label>
+                            <input type="text" id="nome-produto" placeholder="Ex: Maçã, Leite, Café">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="categoria-produto">Categoria</label>
+                            <select id="categoria-produto">
+                                <option value="Mercearia">Mercearia</option>
+                                <option value="Grãos">Grãos e cereais</option>
+                                <option value="Frutas e verduras">Frutas e verduras</option>
+                                <option value="Laticínios">Laticínios</option>
+                                <option value="Padaria">Padaria</option>
+                                <option value="Carnes">Carnes</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="qtd-produto">Quantidade</label>
+                            <input type="text" id="qtd-produto" placeholder="Ex: 2 kg, 12 un">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status-produto">Situação</label>
+                            <select id="status-produto">
+                                <option value="available">Disponível</option>
+                                <option value="orange">Estoque baixo</option>
+                                <option value="red">Em falta</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-adicionar">Salvar Produto</button>
+                    </form>
+                </details>
+            </section>
+
+            <!-- Tabela de Estoque Inicialmente Vazia -->
+            <section class="section" id="estoque">
+                <div class="section-header">
+                    <div>
+                        <h2>Alimentos da casa</h2>
+                        <p>Confira os produtos que estão cadastrados no estoque.</p>
+                    </div>
+                    <span class="counter green-counter">0 produtos</span>
+                </div>
+
+                <div class="stock-table">
+                    <div class="table-header">
+                        <span>Produto</span>
+                        <span>Categoria</span>
+                        <span>Quantidade</span>
+                        <span>Situação</span>
+                    </div>
+
+                    <!-- Nenhum produto inserido por padrão -->
+                </div>
+            </section>
+
+            <footer>
+                <p>ListaCerta © 2026 - Organizando os alimentos da sua casa.</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>
