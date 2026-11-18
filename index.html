@@ -1,139 +1,202 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ListaCerta - Controle de Alimentos</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101712">
+  <title>ListaCerta | Controle residencial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="app-container">
-        <!-- Menu lateral -->
-        <aside class="sidebar">
-            <div>
-                <div class="logo">
-                    <div class="logo-icon">L</div>
-                    <h2>Lista<span>Certa</span></h2>
-                </div>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a class="logo" href="#inicio" aria-label="ListaCerta, página inicial">
+          <span class="logo-icon">L</span>
+          <span class="logo-name">Lista<span>Certa</span></span>
+        </a>
+        <p class="menu-title">MENU PRINCIPAL</p>
+        <nav class="menu" aria-label="Navegação principal">
+          <a href="#inicio" class="menu-item active"><span class="nav-icon">⌂</span> Visão geral</a>
+          <a href="#estoque" class="menu-item"><span class="nav-icon">▦</span> Meu estoque</a>
+          <a href="#faltando" class="menu-item"><span class="nav-icon">🛒</span> Lista de compras</a>
+          <a href="#categorias" class="menu-item"><span class="nav-icon">▤</span> Categorias</a>
+        </nav>
+      </div>
 
-                <p class="menu-title">MENU PRINCIPAL</p>
+      <div class="sidebar-bottom">
+        <div class="tip-card">
+          <span class="tip-icon">✦</span>
+          <h3>Dica para sua casa</h3>
+          <p>Confira a despensa antes de ir ao mercado. Isso ajuda a economizar e evita compras repetidas.</p>
+        </div>
+        <div class="user-profile">
+          <div class="avatar">MC</div>
+          <div>
+            <strong>Minha Casa</strong>
+            <small>Controle residencial</small>
+          </div>
+          <span class="profile-dot" aria-label="Perfil ativo"></span>
+        </div>
+      </div>
+    </aside>
 
-                <nav class="menu">
-                    <a href="#inicio" class="menu-item active"><span>⌂</span> Início</a>
-                    <a href="#estoque" class="menu-item"><span>📦</span> Meu estoque</a>
-                    <a href="#faltando" class="menu-item"><span>🛒</span> Produtos faltando</a>
-                    <a href="#categorias" class="menu-item"><span>📋</span> Categorias</a>
-                </nav>
+    <main class="main-content">
+      <section class="section" id="inicio">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">ORGANIZAÇÃO RESIDENCIAL</p>
+            <h1>Visão geral da despensa</h1>
+            <p class="subtitle">Veja como está o estoque de alimentos da sua casa.</p>
+          </div>
+          <div class="topbar-right">
+            <span class="status"><span class="status-dot"></span> Controle local</span>
+            <div class="date-chip">🏠 Minha casa</div>
+          </div>
+        </header>
+
+        <div class="welcome-card">
+          <div class="welcome-content">
+            <span class="welcome-label">SEU ESTOQUE, ORGANIZADO</span>
+            <h2>Uma casa organizada começa<br>com uma despensa em dia.</h2>
+            <p>Confira os produtos, identifique o que precisa repor e planeje sua próxima compra.</p>
+            <a class="welcome-link" href="#estoque">Ver meu estoque <span>→</span></a>
+          </div>
+          <div class="welcome-illustration" aria-hidden="true">🧺</div>
+        </div>
+
+        <div class="summary-grid">
+          <article class="summary-card">
+            <div class="summary-top"><span class="summary-label">Total cadastrado</span><span class="summary-icon purple">▦</span></div>
+            <strong class="summary-value">6</strong>
+            <small>produtos no controle</small>
+          </article>
+          <article class="summary-card">
+            <div class="summary-top"><span class="summary-label">Disponíveis</span><span class="summary-icon green">✓</span></div>
+            <strong class="summary-value text-green">3</strong>
+            <small>estoque suficiente</small>
+          </article>
+          <article class="summary-card">
+            <div class="summary-top"><span class="summary-label">Estoque baixo</span><span class="summary-icon orange">!</span></div>
+            <strong class="summary-value text-orange">2</strong>
+            <small>reposição recomendada</small>
+          </article>
+          <article class="summary-card">
+            <div class="summary-top"><span class="summary-label">Em falta</span><span class="summary-icon red">×</span></div>
+            <strong class="summary-value text-red">1</strong>
+            <small>precisa comprar</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="estoque">
+        <details class="cadastrar-details">
+          <summary class="section-header-toggle">
+            <div class="add-heading">
+              <span class="add-icon">＋</span>
+              <div>
+                <h2>Adicionar produto</h2>
+                <p>Cadastre um alimento para acompanhar a quantidade em casa.</p>
+              </div>
             </div>
-
-            <div class="sidebar-bottom">
-                <div class="tip-card">
-                    <span class="tip-icon">💡</span>
-                    <h3>Dica do dia</h3>
-                    <p>Organizar os alimentos ajuda a evitar desperdícios e facilita as compras da casa.</p>
-                </div>
-                <div class="user-profile">
-                    <div class="avatar">U</div>
-                    <div>
-                        <strong>Minha Casa</strong>
-                        <small>Controle residencial</small>
-                    </div>
-                </div>
+            <span class="toggle-label">Abrir formulário <span class="toggle-arrow">⌄</span></span>
+          </summary>
+          <form class="form-cadastro" action="#">
+            <div class="form-group">
+              <label for="nome-produto">Nome do produto</label>
+              <input type="text" id="nome-produto" placeholder="Ex.: Macarrão" required>
             </div>
-        </aside>
+            <div class="form-group">
+              <label for="categoria-produto">Categoria</label>
+              <select id="categoria-produto">
+                <option>Mercearia</option><option>Grãos e cereais</option>
+                <option>Frutas e verduras</option><option>Laticínios</option>
+                <option>Padaria</option><option>Carnes</option><option>Outros</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="qtd-produto">Quantidade</label>
+              <input type="text" id="qtd-produto" placeholder="Ex.: 2 kg">
+            </div>
+            <div class="form-group">
+              <label for="status-produto">Situação</label>
+              <select id="status-produto">
+                <option value="available">Disponível</option><option value="orange">Estoque baixo</option><option value="red">Em falta</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-adicionar">Salvar produto <span>＋</span></button>
+          </form>
+        </details>
 
-        <!-- Conteúdo principal -->
-        <main class="main-content">
-            <header class="topbar" id="inicio">
-                <div>
-                    <h1>Meu estoque</h1>
-                    <p>Veja como está a organização dos alimentos da sua casa.</p>
-                </div>
-                <div class="topbar-right">
-                    <span class="status">● Estoque atualizado</span>
-                    <div class="notification">🔔</div>
-                </div>
-            </header>
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">INVENTÁRIO</p>
+            <h2>Alimentos da casa</h2>
+            <p class="subtitle">Todos os produtos cadastrados no seu estoque.</p>
+          </div>
+          <span class="counter">6 produtos</span>
+        </div>
 
-            <!-- Seção de cadastro expansível -->
-            <section class="section" id="cadastrar">
-                <details class="cadastrar-details">
-                    <summary class="section-header-toggle">
-                        <div>
-                            <h2>+ Adicionar Novo Produto</h2>
-                            <p>Clique para abrir o formulário de cadastro.</p>
-                        </div>
-                    </summary>
+        <div class="stock-table" role="table" aria-label="Produtos cadastrados">
+          <div class="table-header" role="row">
+            <span role="columnheader">Produto</span><span role="columnheader">Categoria</span><span role="columnheader">Quantidade</span><span role="columnheader">Situação</span>
+          </div>
+          <div class="table-row" role="row"><span class="product-name"><span class="product-emoji">🍚</span> Arroz Tipo 1</span><span class="category-text">Grãos e cereais</span><span class="quantity">5 kg</span><span><span class="badge available">Disponível</span></span></div>
+          <div class="table-row" role="row"><span class="product-name"><span class="product-emoji">🫘</span> Feijão Carioca</span><span class="category-text">Grãos e cereais</span><span class="quantity">2 kg</span><span><span class="badge available">Disponível</span></span></div>
+          <div class="table-row" role="row"><span class="product-name"><span class="product-emoji">🥛</span> Leite Integral</span><span class="category-text">Laticínios</span><span class="quantity">2 un.</span><span><span class="badge orange">Estoque baixo</span></span></div>
+          <div class="table-row" role="row"><span class="product-name"><span class="product-emoji">☕</span> Café Torrado</span><span class="category-text">Mercearia</span><span class="quantity">0 un.</span><span><span class="badge red">Em falta</span></span></div>
+          <div class="table-row" role="row"><span class="product-name"><span class="product-emoji">🍎</span> Maçã Gala</span><span class="category-text">Frutas e verduras</span><span class="quantity">6 un.</span><span><span class="badge available">Disponível</span></span></div>
+          <div class="table-row" role="row"><span class="product-name"><span class="product-emoji">🍗</span> Peito de Frango</span><span class="category-text">Carnes</span><span class="quantity">500 g</span><span><span class="badge orange">Estoque baixo</span></span></div>
+        </div>
+        <p class="table-note">* Dados demonstrativos para apresentação do projeto.</p>
+      </section>
 
-                    <form class="form-cadastro" action="#" method="POST">
-                        <div class="form-group">
-                            <label for="nome-produto">Nome do produto</label>
-                            <input type="text" id="nome-produto" placeholder="Ex: Maçã, Leite, Café">
-                        </div>
+      <section class="section section-spacing" id="faltando">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">PRÓXIMA COMPRA</p>
+            <h2>Lista de reposição</h2>
+            <p class="subtitle">Itens que estão acabando ou já precisam ser comprados.</p>
+          </div>
+          <span class="counter counter-alert">3 itens</span>
+        </div>
+        <div class="missing-list">
+          <article class="missing-card urgent">
+            <div class="missing-icon">☕</div><div class="missing-info"><strong>Café Torrado</strong><small>Mercearia · 0 unidades</small></div><span class="badge red">Comprar agora</span>
+          </article>
+          <article class="missing-card warning">
+            <div class="missing-icon">🥛</div><div class="missing-info"><strong>Leite Integral</strong><small>Laticínios · Restam 2 unidades</small></div><span class="badge orange">Estoque baixo</span>
+          </article>
+          <article class="missing-card warning">
+            <div class="missing-icon">🍗</div><div class="missing-info"><strong>Peito de Frango</strong><small>Carnes · Restam 500 g</small></div><span class="badge orange">Estoque baixo</span>
+          </article>
+        </div>
+      </section>
 
-                        <div class="form-group">
-                            <label for="categoria-produto">Categoria</label>
-                            <select id="categoria-produto">
-                                <option value="Mercearia">Mercearia</option>
-                                <option value="Grãos">Grãos e cereais</option>
-                                <option value="Frutas e verduras">Frutas e verduras</option>
-                                <option value="Laticínios">Laticínios</option>
-                                <option value="Padaria">Padaria</option>
-                                <option value="Carnes">Carnes</option>
-                                <option value="Outros">Outros</option>
-                            </select>
-                        </div>
+      <section class="section section-spacing" id="categorias">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">ORGANIZAÇÃO</p>
+            <h2>Categorias</h2>
+            <p class="subtitle">Visualize os alimentos separados por tipo.</p>
+          </div>
+          <span class="counter">6 categorias</span>
+        </div>
+        <div class="categories-grid">
+          <article class="category-card"><div class="category-top"><span class="category-icon">🌾</span><span class="category-count">2 itens</span></div><h3>Grãos e cereais</h3><p>Arroz Tipo 1, Feijão Carioca</p></article>
+          <article class="category-card"><div class="category-top"><span class="category-icon">🥛</span><span class="category-count">1 item</span></div><h3>Laticínios</h3><p>Leite Integral</p></article>
+          <article class="category-card"><div class="category-top"><span class="category-icon">☕</span><span class="category-count">1 item</span></div><h3>Mercearia</h3><p>Café Torrado</p></article>
+          <article class="category-card"><div class="category-top"><span class="category-icon">🍎</span><span class="category-count">1 item</span></div><h3>Frutas e verduras</h3><p>Maçã Gala</p></article>
+          <article class="category-card"><div class="category-top"><span class="category-icon">🥩</span><span class="category-count">1 item</span></div><h3>Carnes</h3><p>Peito de Frango</p></article>
+          <article class="category-card empty-category"><div class="category-top"><span class="category-icon">🥖</span><span class="category-count">0 itens</span></div><h3>Padaria</h3><p>Nenhum produto cadastrado</p></article>
+        </div>
+      </section>
 
-                        <div class="form-group">
-                            <label for="qtd-produto">Quantidade</label>
-                            <input type="text" id="qtd-produto" placeholder="Ex: 2 kg, 12 un">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="status-produto">Situação</label>
-                            <select id="status-produto">
-                                <option value="available">Disponível</option>
-                                <option value="orange">Estoque baixo</option>
-                                <option value="red">Em falta</option>
-                            </select>
-                        </div>
-
-                        <button type="submit" class="btn-adicionar">Salvar Produto</button>
-                    </form>
-                </details>
-            </section>
-
-            <!-- Tabela de Estoque Inicialmente Vazia -->
-            <section class="section" id="estoque">
-                <div class="section-header">
-                    <div>
-                        <h2>Alimentos da casa</h2>
-                        <p>Confira os produtos que estão cadastrados no estoque.</p>
-                    </div>
-                    <span class="counter green-counter">0 produtos</span>
-                </div>
-
-                <div class="stock-table">
-                    <div class="table-header">
-                        <span>Produto</span>
-                        <span>Categoria</span>
-                        <span>Quantidade</span>
-                        <span>Situação</span>
-                    </div>
-
-                    <!-- Nenhum produto inserido por padrão -->
-                </div>
-            </section>
-
-            <footer>
-                <p>ListaCerta © 2026 - Organizando os alimentos da sua casa.</p>
-            </footer>
-        </main>
-    </div>
+      <footer><span class="footer-logo">Lista<span>Certa</span></span><p>Organizando os alimentos da sua casa. © 2026</p></footer>
+    </main>
+  </div>
 </body>
 </html>
